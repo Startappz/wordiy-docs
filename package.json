@@ -17,12 +17,15 @@
     "@docusaurus/core": "3.10.0",
     "@docusaurus/faster": "3.10.0",
     "@docusaurus/preset-classic": "3.10.0",
-    "@img/sharp-darwin-arm64": "^0.34.5",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
+  },
+  "optionalDependencies": {
+    "@img/sharp-darwin-arm64": "^0.34.5",
+    "@img/sharp-linux-x64": "^0.34.5"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.10.0",
