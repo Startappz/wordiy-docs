@@ -11,7 +11,7 @@ const config = {
     v4: true,
   },
 
-  url: 'https://developers.wordiy.dev',
+  url: 'https://docs.wordiy.dev',
   baseUrl: '/',
 
   organizationName: 'startappz',
