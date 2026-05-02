@@ -1,0 +1,18 @@
+{
+  "title": {
+    "message": "Wordiy",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Wordiy Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Docs": {
+    "message": "Docs",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.Back to App": {
+    "message": "Back to App",
+    "description": "Navbar item with label Back to App"
+  }
+}

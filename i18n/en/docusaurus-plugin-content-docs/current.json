@@ -1,0 +1,22 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Getting Started": {
+    "message": "Getting Started",
+    "description": "The label for category 'Getting Started' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Organizations": {
+    "message": "Organizations",
+    "description": "The label for category 'Organizations' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Projects": {
+    "message": "Projects",
+    "description": "The label for category 'Projects' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Translations": {
+    "message": "Translations",
+    "description": "The label for category 'Translations' in sidebar 'tutorialSidebar'"
+  }
+}

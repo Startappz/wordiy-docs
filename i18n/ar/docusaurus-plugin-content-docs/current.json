@@ -1,0 +1,22 @@
+{
+  "version.label": {
+    "message": "التالي",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Getting Started": {
+    "message": "البدء السريع",
+    "description": "The label for category 'Getting Started' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Organizations": {
+    "message": "المنظمات",
+    "description": "The label for category 'Organizations' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Projects": {
+    "message": "المشاريع",
+    "description": "The label for category 'Projects' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Translations": {
+    "message": "الترجمات",
+    "description": "The label for category 'Translations' in sidebar 'tutorialSidebar'"
+  }
+}
