@@ -6,6 +6,7 @@
 
 /* Light mode — darkened lime green for contrast on white */
 :root {
+  --ifm-font-family-base: 'Space Grotesk', system-ui, sans-serif;
   --ifm-color-primary: oklch(55% 0.3 120);
   --ifm-color-primary-dark: oklch(50% 0.3 120);
   --ifm-color-primary-darker: oklch(45% 0.3 120);
