@@ -1,291 +1,313 @@
 ---
 sidebar_position: 2
-title: Edit Translations
+title: تعديل الترجمات
 ---
 
-# Edit Translations
+تعلّم كيفية تعديل الترجمات وإدارتها في Wordiy.
 
-Learn how to edit and manage translations in Wordiy.
+## الوصول إلى محرر الترجمة
 
-## Accessing the Translation Editor
+انتقل إلى مشروعك وافتح صفحة **المفاتيح**. تعرض كل صف اسم المفتاح على اليسار وترجمته الحالية على اليمين.
 
-### Open a Translation
+![قائمة المفاتيح](/img/screenshots/edit-translations-keys-list.png)
 
-1. Navigate to your **Project**
-2. Go to the **Translations** tab
-3. Select a language from the sidebar
-4. Click on any translation string to open the editor
+### فتح ترجمة
 
-### Translation View
+1. انتقل إلى **مشروعك**
+2. انقر على أي صف ترجمة لفتح المحرر المضمّن
+3. يفتح المحرر على الجانب الأيمن من الشاشة
 
-The translations view shows:
-- **Source language** (original string) on the left
-- **Target language** (translation) on the right
-- **Comments** for context and notes
-- **History** tracking all changes
-- **Status** (pending, approved, rejected)
+### عرض الترجمة
 
-## Translation Editor Interface
+يعرض عرض الترجمات:
 
-### Main Editing Panel
+- **اللغة المصدر** (النص الأصلي) على اليسار
+- **اللغة الهدف** (الترجمة) على اليمين
+- **التعليقات** للسياق والملاحظات
+- **السجل** لتتبع جميع التغييرات
+- **الحالة** (معلّق، مقبول، مرفوض)
 
-The editor includes:
+## واجهة محرر الترجمة
 
-- **Translation Input Field** — Where you type the translation
-- **Character Counter** — Shows current/maximum characters (if limit is set)
-- **Placeholder Indicators** — Visual markers for dynamic content
-- **AI Suggestions** — Machine translation suggestions
-- **Translation Memory** — Similar translations from past projects
+انقر على أي ترجمة لفتح المحرر. يعرض اللوح الأيمن اقتراحات الترجمة الآلية والتعليقات والمهام والسجل.
 
-### Editor Modes
+![محرر الترجمة](/img/screenshots/edit-translations-editor.png)
 
-#### Visual Mode (Default)
+### لوحة التحرير الرئيسية
 
-- Displays placeholders as highlighted boxes
-- Easy to click and insert placeholders
-- Best for most translators
-- Shows formatted text as it appears
+يتضمن المحرر:
 
-#### Code Mode
+- **حقل إدخال الترجمة** — حيث تكتب الترجمة
+- **عداد الأحرف** — يعرض الأحرف الحالية/القصوى (إن وُجد حد)
+- **مؤشرات العناصر النائبة** — علامات مرئية للمحتوى الديناميكي
+- **اقتراحات الذكاء الاصطناعي** — اقتراحات الترجمة الآلية
+- **ذاكرة الترجمة** — ترجمات مشابهة من مشاريع سابقة
 
-- Shows raw text with placeholder syntax
-- Useful for complex formatting
-- Allows direct text manipulation
-- Good for advanced editors
+### أوضاع المحرر
 
-**Toggle between modes:** Click the "Code/Visual" button in the editor
+#### الوضع المرئي (الافتراضي)
 
-## Working with Placeholders
+- يعرض العناصر النائبة كمربعات مميزة
+- سهولة النقر لإدراج العناصر النائبة
+- الأفضل لمعظم المترجمين
+- يعرض النص المنسق كما يظهر
 
-### Placeholder Types
+#### وضع الكود
 
-**Variable Placeholders**
-```
-Hello {name}!
-```
-- Replaced with dynamic content
-- Common in user names, dates, numbers
+- يعرض النص الخام مع صياغة العناصر النائبة
+- مفيد للتنسيق المعقد
+- يتيح التعامل المباشر مع النص
+- مناسب للمحررين المتقدمين
 
-**ICU Placeholders**
-```
-{count, plural, one {# item} other {# items}}
-```
-- Handle pluralization rules
-- Support conditional logic
+**التبديل بين الوضعين:** انقر زر "Code/Visual" في المحرر
 
-### Inserting Placeholders
+## العمل مع العناصر النائبة
 
-**In Visual Mode:**
-1. Click where you want the placeholder
-2. Click the placeholder from the suggestions
-3. It's automatically inserted
+### أنواع العناصر النائبة
 
-**In Code Mode:**
-1. Type the placeholder syntax directly
-2. Example: `{variable_name}`
-3. Save to validate
+#### العناصر النائبة المتغيرة
 
-### Viewing Missing Placeholders
-
-If a placeholder is missing:
-1. Look for the red warning indicator
-2. Click on the missing placeholder
-3. Choose to insert it or continue
-
-## Plural Translations
-
-When a string has plural forms, each form appears in a separate field:
-
-```
-One item: "1 item"
-Other items: "{count} items"
+```text
+مرحبًا {name}!
 ```
 
-Each field shows:
-- **Example number** — How many items (1, 5, etc.)
-- **Plural form** — The grammatical form
-- **Translation field** — Where you type
+- تُستبدل بمحتوى ديناميكي
+- شائعة في أسماء المستخدمين والتواريخ والأرقام
 
-**Tips for plural translations:**
-- Use consistent variable names
-- Keep structure similar across forms
-- Test with example numbers
+#### عناصر ICU النائبة
 
-## Character Limits
-
-Some strings have character limits (e.g., UI buttons, short labels):
-
-```
-Translation: "Save"
-Limit: 10 characters
-Current: 4/10 ✓
+```text
+{count, plural, one {# عنصر} other {# عناصر}}
 ```
 
-### When Over Limit
+- تتعامل مع قواعد الجمع
+- تدعم المنطق الشرطي
 
-- The counter turns red
-- A warning appears
-- You can still save with confirmation
-- But it may break the UI layout
+### إدراج العناصر النائبة
 
-**Best practices:**
-- Keep translations within limits when possible
-- Use shorter synonyms
-- Abbreviate when appropriate
+في الوضع المرئي:
 
-## Comments & Context
+1. انقر حيث تريد العنصر النائب
+2. انقر على العنصر النائب من الاقتراحات
+3. يُدرج تلقائيًا
 
-### Viewing Comments
+في وضع الكود:
 
-Comments provide context from developers:
-- **Purpose** — Why this string exists
-- **Context** — Where it appears in the app
-- **Examples** — How the string is used
+1. اكتب صياغة العنصر النائب مباشرةً
+2. مثال: `{variable_name}`
+3. احفظ للتحقق من الصحة
 
-### Leaving Comments
+### عرض العناصر النائبة المفقودة
 
-1. Click **"Comments"** panel
-2. Type your question or note
-3. Click **"Post"**
-4. Others can reply to your comment
+إذا كان عنصر نائب مفقودًا:
 
-**Good comments:**
-- Ask for clarification
-- Point out translation issues
-- Suggest improvements
-- Report context problems
+1. ابحث عن مؤشر التحذير الأحمر
+2. انقر على العنصر النائب المفقود
+3. اختر إدراجه أو المتابعة
 
-## Translation Status
+## ترجمات الجمع
 
-Each translation can have a status:
+عندما يحتوي نص على أشكال جمع، يظهر كل شكل في حقل منفصل:
 
-| Status | Meaning | Who Can Set |
-|--------|---------|------------|
-| **Pending** | Waiting to be reviewed | Translator |
-| **Approved** | Verified correct | Reviewer |
-| **Rejected** | Needs changes | Reviewer |
-| **In Progress** | Currently being worked on | Translator |
+```text
+عنصر واحد: "عنصر واحد"
+عناصر متعددة: "{count} عناصر"
+```
 
-### Submitting for Review
+يعرض كل حقل:
 
-1. Complete your translation
-2. Click **"Submit for Review"**
-3. Choose reviewers (optional)
-4. Add a message
-5. Submit
+- **رقم مثال** — عدد العناصر (1، 5، إلخ)
+- **شكل الجمع** — الشكل النحوي
+- **حقل الترجمة** — حيث تكتب
 
-## Translation Memory
+نصائح لترجمات الجمع:
 
-Translation Memory (TM) shows similar translations:
+- استخدم أسماء متغيرات متسقة
+- حافظ على بنية مشابهة عبر الأشكال
+- اختبر بأرقام مثال
 
-- **From this project** — Previous translations
-- **From other projects** — Team's historical translations
-- **AI suggestions** — Machine translations
+## حدود الأحرف
 
-### Using TM Suggestions
+بعض النصوص لها حدود للأحرف (مثل أزرار واجهة المستخدم والتسميات القصيرة):
 
-1. Review suggestions in the panel
-2. Click to use a suggestion
-3. Edit if needed
-4. Save
+```text
+الترجمة: "حفظ"
+الحد: 10 أحرف
+الحالي: 4/10 ✓
+```
 
-**Tip:** Consistent use of TM ensures terminology consistency.
+### عند تجاوز الحد
 
-## Keyboard Shortcuts
+- يتحول العداد إلى اللون الأحمر
+- تظهر رسالة تحذير
+- يمكنك الحفظ مع تأكيد
+- لكن قد يؤثر ذلك على تخطيط واجهة المستخدم
 
-| Shortcut | Action |
-|----------|--------|
-| `Tab` | Move to next translation |
-| `Shift + Tab` | Move to previous translation |
-| `Ctrl/Cmd + S` | Save translation |
-| `Ctrl/Cmd + Enter` | Submit for review |
-| `Escape` | Close editor |
+أفضل الممارسات:
 
-## Saving & Submitting
+- حافظ على الترجمات ضمن الحدود قدر الإمكان
+- استخدم مرادفات أقصر
+- اختصر عند الضرورة
 
-### Save Draft
+## التعليقات والسياق
 
-- Saves your translation locally
-- Not yet visible to reviewers
-- You can come back and edit
+### عرض التعليقات
 
-Click **"Save"**
+توفر التعليقات سياقًا من المطورين:
 
-### Submit for Review
+- **الغرض** — لماذا يوجد هذا النص
+- **السياق** — أين يظهر في التطبيق
+- **الأمثلة** — كيف يُستخدم النص
 
-- Marks translation as complete
-- Reviewers can approve/reject
-- Shows as "Pending Review"
+### إضافة تعليقات
 
-Click **"Submit for Review"**
+1. انقر لوح **التعليقات** على الجانب الأيمن من المحرر
+2. اكتب سؤالك أو ملاحظتك
+3. انقر **نشر**
+4. يمكن للآخرين الرد على تعليقك
 
-### Approve (Reviewers Only)
+تعليقات جيدة:
 
-- Confirms translation is correct
-- Marks as "Approved"
-- Ready for export
+- اطلب توضيحًا
+- أشر إلى مشكلات الترجمة
+- اقترح تحسينات
+- أبلغ عن مشكلات السياق
 
-Click **"Approve"**
+## حالة الترجمة
 
-### Reject (Reviewers Only)
+يمكن أن يكون لكل ترجمة حالة:
 
-- Sends back for changes
-- Includes feedback message
-- Translator can revise
+| الحالة | المعنى | من يمكنه التعيين |
+| --- | --- | --- |
+| **معلّق** | في انتظار المراجعة | المترجم |
+| **مقبول** | تم التحقق من صحته | المراجع |
+| **مرفوض** | يحتاج إلى تغييرات | المراجع |
+| **قيد التنفيذ** | يُعمل عليه حاليًا | المترجم |
 
-Click **"Reject"** + add message
+### تقديم للمراجعة
 
-## Best Practices
+1. أكمل ترجمتك
+2. انقر **تقديم للمراجعة**
+3. اختر المراجعين (اختياري)
+4. أضف رسالة
+5. قدّم
 
-### Before Translating
+## ذاكرة الترجمة
 
-- Read comments and context
-- Check translation memory
-- Review similar strings
-- Understand the terminology
+يعرض اللوح الأيمن اقتراحات **الترجمة الآلية**. انقر **جلب الاقتراحات** للحصول على ترجمات مدعومة بالذكاء الاصطناعي للنص الحالي.
 
-### While Translating
+![لوح الترجمة الآلية](/img/screenshots/edit-translations-mt-suggestions.png)
 
-- Keep tone consistent
-- Maintain proper length
-- Preserve formatting
-- Use placeholders correctly
+تعرض ذاكرة الترجمة أيضًا ترجمات مشابهة:
 
-### After Translating
+- **من هذا المشروع** — ترجمات سابقة
+- **من مشاريع أخرى** — الترجمات التاريخية للفريق
+- **اقتراحات الذكاء الاصطناعي** — ترجمات آلية
 
-- Proofread carefully
-- Check placeholders
-- Verify character limits
-- Submit for review
+### استخدام اقتراحات ذاكرة الترجمة
 
-## Common Issues
+1. راجع الاقتراحات في اللوح
+2. انقر لاستخدام اقتراح
+3. عدّله إذا لزم الأمر
+4. احفظ
 
-### Placeholder Won't Insert
+**نصيحة:** الاستخدام المتسق لذاكرة الترجمة يضمن اتساق المصطلحات.
 
-- Check placeholder name is correct
-- Ensure you're in visual mode
-- Verify the string supports placeholders
+## اختصارات لوحة المفاتيح
 
-### Character Limit Exceeded
+| الاختصار | الإجراء |
+| --- | --- |
+| `Tab` | الانتقال إلى الترجمة التالية |
+| `Shift + Tab` | الانتقال إلى الترجمة السابقة |
+| `Ctrl/Cmd + S` | حفظ الترجمة |
+| `Ctrl/Cmd + Enter` | تقديم للمراجعة |
+| `Escape` | إغلاق المحرر |
 
-- Use shorter synonyms
-- Abbreviate where appropriate
-- Check if space is optional
+## الحفظ والتقديم
 
-### Can't Save Translation
+### حفظ مسودة
 
-- Check if field is required
-- Verify no HTML/forbidden characters
-- Ensure placeholders are valid
+- يحفظ ترجمتك محليًا
+- غير مرئية للمراجعين بعد
+- يمكنك العودة والتعديل
 
-### Translation Not Appearing
+انقر **حفظ**
 
-- Confirm it's marked "Approved"
-- Check language is selected in export
-- Verify file format
+### إرسال الترجمة للمراجعة
 
-## Next Steps
+- يضع علامة على الترجمة كمكتملة
+- يمكن للمراجعين القبول/الرفض
+- يظهر كـ"في انتظار المراجعة"
 
-- [Review translations](/docs/translations/review)
-- [Export translations](/docs/translations/export)
-- [Manage translation memory](/docs/translations/translation-memory)
+انقر **تقديم للمراجعة**
+
+### القبول (للمراجعين فقط)
+
+- يؤكد صحة الترجمة
+- يضع علامة "مقبول"
+- جاهز للتصدير
+
+انقر **قبول**
+
+### الرفض (للمراجعين فقط)
+
+- يُعيد للتعديل
+- يتضمن رسالة تغذية راجعة
+- يمكن للمترجم المراجعة
+
+انقر **رفض** وأضف رسالة
+
+## أفضل الممارسات
+
+### قبل الترجمة
+
+- اقرأ التعليقات والسياق
+- تحقق من ذاكرة الترجمة
+- راجع النصوص المشابهة
+- افهم المصطلحات
+
+### أثناء الترجمة
+
+- حافظ على نبرة متسقة
+- راعِ الطول المناسب
+- احتفظ بالتنسيق
+- استخدم العناصر النائبة بشكل صحيح
+
+### بعد الترجمة
+
+- راجع بعناية
+- تحقق من العناصر النائبة
+- تحقق من حدود الأحرف
+- قدّم للمراجعة
+
+## المشكلات الشائعة
+
+### لا يمكن إدراج العنصر النائب
+
+- تحقق من صحة اسم العنصر النائب
+- تأكد من أنك في الوضع المرئي
+- تحقق من أن النص يدعم العناصر النائبة
+
+### تجاوز حد الأحرف
+
+- استخدم مرادفات أقصر
+- اختصر عند الضرورة
+- تحقق مما إذا كانت المسافة اختيارية
+
+### لا يمكن حفظ الترجمة
+
+- تحقق مما إذا كان الحقل مطلوبًا
+- تأكد من عدم وجود HTML أو أحرف محظورة
+- تأكد من صحة العناصر النائبة
+
+### الترجمة لا تظهر
+
+- تأكد من أنها مُعلَّمة كـ"مقبولة"
+- تحقق من تحديد اللغة في التصدير
+- تحقق من صيغة الملف
+
+## الخطوات التالية
+
+- [مراجعة الترجمات](/docs/translations/review)
+- [تصدير الترجمات](/docs/translations/export)
+- [إدارة ذاكرة الترجمة](/docs/translations/translation-memory)

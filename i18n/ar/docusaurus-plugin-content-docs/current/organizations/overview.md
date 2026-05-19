@@ -65,6 +65,8 @@ Configure your organization to work seamlessly with your development workflow:
 - **Configure notification preferences** — Control email alerts, Slack notifications, and other communication channels
 - **Branding & appearance** — Customize colors, logos, and language for your team's interface
 
+![إعدادات المؤسسة](/img/screenshots/organizations-settings.png)
+
 ## Organization Roles
 
 Each team member in an organization has a role that determines their permissions. Understanding roles is crucial for setting up an effective translation workflow:

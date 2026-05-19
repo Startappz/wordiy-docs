@@ -1,66 +1,97 @@
 ---
 sidebar_position: 1
-title: Upload Strings
+title: رفع النصوص
 ---
 
-# Upload Translatable Strings
+أضف النصوص القابلة للترجمة إلى Wordiy. انتقل إلى مشروعك وافتح صفحة **المفاتيح** للبدء.
 
-Add your translatable strings to Wordiy.
+![نظرة عامة على المفاتيح](/img/screenshots/upload-strings-keys-overview.png)
 
-## Upload Methods
+## طرق الرفع
 
-### 1. File Upload
+### 1. رفع ملف
 
-1. Go to your project
-2. Click **Upload Strings**
-3. Select your file (JSON, YAML, CSV)
-4. Click **Upload**
+استورد ملفات الترجمة الموجودة مباشرةً إلى Wordiy.
 
-Supported formats:
+1. انتقل إلى مشروعك
+2. انقر على أيقونة **الاستيراد** في الشريط الجانبي الأيسر
+3. اسحب الملف أو انقر **اختر ملفًا** للتحديد من جهازك
+4. حدد **اللغة** (اختياري) و**وضع الاستيراد**
+5. انقر **استيراد**
+
+![صفحة الاستيراد](/img/screenshots/upload-strings-import.png)
+
+الصيغ المدعومة:
+
 - JSON
-- YAML
-- CSV
-- Properties files
+- XLIFF / Apple XLIFF
+- PO PHP / PO C/C++ / PO Python
+- Apple Strings / Apple Stringsdict / Apple Strings Catalog
+- Android XML
+- Compose Multiplatform XML
+- Flutter ARB
+- Ruby YAML
+- i18next
+- .NET RESX
+- XLSX / CSV
 
-### 2. Manual Entry
+### 2. الإدخال اليدوي
 
-1. Click **+ Add String**
-2. Enter the string key and value
-3. Click **Save**
+أضف نصوصًا فردية مباشرةً من صفحة المفاتيح.
 
-### 3. API Integration
+1. انقر زر **+ KEY** في الزاوية اليمنى العليا
+2. أدخل اسم **المفتاح** (أحرف وأرقام و`.` و`_` و`-` مسموح بها)
+3. أضف **وصفًا** و**وسوم** اختيارية
+4. أدخل ترجمة اللغة الأساسية
+5. انقر **إنشاء**
 
-Use the REST API to automatically sync strings from your codebase.
+![نموذج مفتاح جديد](/img/screenshots/upload-strings-new-key.png)
 
-## Format Examples
+### 3. تكامل API
+
+استخدم REST API لمزامنة النصوص تلقائيًا من قاعدة الكود الخاصة بك.
+
+```bash
+curl -X POST https://app.wordiy.dev/v2/projects/{project_id}/keys \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"key": {"name": "welcome_message", "translations_attributes": [{"language_id": 1, "text": "مرحبًا"}]}}'
+```
+
+راجع [مرجع API](/docs/api) للتوثيق الكامل.
+
+## أمثلة على الصيغ
 
 ### JSON
+
 ```json
 {
-  "welcome_message": "Welcome to our app",
-  "button_submit": "Submit",
-  "error_404": "Page not found"
+  "welcome_message": "مرحبًا بك في تطبيقنا",
+  "button_submit": "إرسال",
+  "error_404": "الصفحة غير موجودة"
 }
 ```
 
-### YAML
+### Ruby YAML
+
 ```yaml
-welcome_message: Welcome to our app
-button_submit: Submit
-error_404: Page not found
+ar:
+  welcome_message: مرحبًا بك في تطبيقنا
+  button_submit: إرسال
+  error_404: الصفحة غير موجودة
 ```
 
 ### CSV
-```
+
+```csv
 key,value
-welcome_message,Welcome to our app
-button_submit,Submit
-error_404,Page not found
+welcome_message,مرحبًا بك في تطبيقنا
+button_submit,إرسال
+error_404,الصفحة غير موجودة
 ```
 
-## Next Steps
+## الخطوات التالية
 
-- [Configure translations](translate.md)
-- [Invite your team](../team/invite-members.md)
-- [Set up machine translation](../ai/machine-translation.md)
-
+- [ترجمة النصوص](translate.md)
+- [مراجعة الترجمات](review.md)
+- [تصدير الترجمات](export.md)
