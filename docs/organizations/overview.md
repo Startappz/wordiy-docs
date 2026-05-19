@@ -65,6 +65,8 @@ Configure your organization to work seamlessly with your development workflow:
 - **Configure notification preferences** — Control email alerts, Slack notifications, and other communication channels
 - **Branding & appearance** — Customize colors, logos, and language for your team's interface
 
+![Organization Settings](/img/screenshots/organizations-settings.png)
+
 ## Organization Roles
 
 Each team member in an organization has a role that determines their organization-level permissions. Additionally, team members can have different roles within individual projects (Translator, Reviewer, etc.).

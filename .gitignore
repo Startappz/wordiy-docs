@@ -35,8 +35,10 @@ yarn-error.log*
 *~
 
 # Claude Code
-.claude/settings.local.json
-.claude/worktrees/
+.claude/
+AGENTS.md
+CLAUDE.md
+QUICKSTART.md
 
 # GitNexus
 .gitnexus/
